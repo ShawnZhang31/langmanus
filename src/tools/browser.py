@@ -14,7 +14,10 @@ expected_browser = None
 # Use Chrome instance if specified
 if CHROME_INSTANCE_PATH:
     expected_browser = Browser(
-        config=BrowserConfig(chrome_instance_path=CHROME_INSTANCE_PATH)
+        config=BrowserConfig(
+            headless=False,
+            disable_security=True,
+            chrome_instance_path=CHROME_INSTANCE_PATH)
     )
 
 
