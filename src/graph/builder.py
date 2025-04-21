@@ -24,3 +24,5 @@ def build_graph():
     builder.add_node("browser", browser_node)
     builder.add_node("reporter", reporter_node)
     return builder.compile()
+
+graph = build_graph()

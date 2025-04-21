@@ -15,3 +15,6 @@ agent_history.gif
 .env
 
 .idea/
+
+# langgraph_api
+.langgraph_api/
