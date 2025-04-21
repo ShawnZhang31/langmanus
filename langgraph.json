@@ -1,7 +1,7 @@
 {
     "dockerfile_lines": [],
     "graphs": {
-      "langmanus": "./src/graph/builder.py:graph"
+      "langmanus": "src.graph.builder:graph"
     },
     "python_version": "3.12",
     "env": "./.env",

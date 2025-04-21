@@ -1,3 +1,8 @@
+# 调试整张图
+```bash
+uv run langgraph dev
+```
+
 # 连接浏览器
 连接浏览器的时候，使用cdp_url比较稳定。
 1. 启动浏览器
