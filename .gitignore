@@ -18,3 +18,9 @@ agent_history.gif
 
 # langgraph_api
 .langgraph_api/
+
+# vscode
+.vscode/
+
+# ruff
+.ruff_cache/

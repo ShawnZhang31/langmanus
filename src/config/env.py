@@ -21,3 +21,9 @@ VL_API_KEY = os.getenv("VL_API_KEY")
 
 # Chrome Instance configuration
 CHROME_INSTANCE_PATH = os.getenv("CHROME_INSTANCE_PATH")
+CHROME_HEADLESS = True if os.getenv("CHROME_HEADLESS") in ["True", "true", "1"] else False
+CHROME_PROXY_SERVER = os.getenv("CHROME_PROXY_SERVER", None)
+CHROME_PROXY_USERNAME = os.getenv("CHROME_PROXY_USERNAME", None)
+CHROME_PROXY_PASSWORD = os.getenv("CHROME_PROXY_PASSWORD", None)
+# Browser History Directory
+BROWSER_HISTORY_DIR = os.getenv("BROWSER_HISTORY_DIR", "./logs/browser_history")
