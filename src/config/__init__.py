@@ -18,6 +18,10 @@ from .env import (
     CHROME_PROXY_USERNAME,
     CHROME_PROXY_PASSWORD,
     BROWSER_HISTORY_DIR,
+    # Langfuse
+    LANGFUSE_SECRET_KEY,
+    LANGFUSE_PUBLIC_KEY,
+    LANGFUSE_HOST,
 )
 from .tools import TAVILY_MAX_RESULTS
 
@@ -46,4 +50,8 @@ __all__ = [
     "CHROME_PROXY_USERNAME",
     "CHROME_PROXY_PASSWORD",
     "BROWSER_HISTORY_DIR",
+    # Langfuse
+    "LANGFUSE_SECRET_KEY",
+    "LANGFUSE_PUBLIC_KEY",
+    "LANGFUSE_HOST",
 ]

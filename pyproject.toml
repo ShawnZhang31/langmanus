@@ -28,6 +28,9 @@ dependencies = [
     "langchain-deepseek>=0.1.2",
     "langgraph-cli[inmem]>=0.2.5",
     "ruff>=0.11.6",
+    "langfuse>=2.60.3",
+    "plotly>=6.0.1",
+    "matplotlib>=3.10.1",
 ]
 
 [project.optional-dependencies]

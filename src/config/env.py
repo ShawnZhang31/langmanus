@@ -27,3 +27,8 @@ CHROME_PROXY_USERNAME = os.getenv("CHROME_PROXY_USERNAME", None)
 CHROME_PROXY_PASSWORD = os.getenv("CHROME_PROXY_PASSWORD", None)
 # Browser History Directory
 BROWSER_HISTORY_DIR = os.getenv("BROWSER_HISTORY_DIR", "./logs/browser_history")
+
+# Langfuse
+LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY", None)
+LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY", None)
+LANGFUSE_HOST = os.getenv("LANGFUSE_HOST", "http://47.113.151.33:3000")

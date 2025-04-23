@@ -1,9 +1,26 @@
 import logging
 
-from src.config import TEAM_MEMBERS
+from src.config import (
+    TEAM_MEMBERS,
+    LANGFUSE_SECRET_KEY,
+    LANGFUSE_PUBLIC_KEY,
+    LANGFUSE_HOST,
+)
 from src.graph import build_graph
 from langchain_community.adapters.openai import convert_message_to_dict
 import uuid
+from langfuse.callback import CallbackHandler
+
+# langfuse callback handler
+langfuse_callback = None
+if LANGFUSE_SECRET_KEY and LANGFUSE_PUBLIC_KEY and LANGFUSE_HOST:
+    langfuse_callback = CallbackHandler(
+        secret_key=LANGFUSE_SECRET_KEY,
+        public_key=LANGFUSE_PUBLIC_KEY,
+        host=LANGFUSE_HOST,
+    )
+else:
+    raise ValueError("Langfuse is not configured")
 
 # Configure logging
 logging.basicConfig(
@@ -71,6 +88,7 @@ async def run_agent_workflow(
             "search_before_planning": search_before_planning,
         },
         version="v2",
+        # config={"callbacks": [langfuse_callback]},
     ):
         kind = event.get("event")
         data = event.get("data")
