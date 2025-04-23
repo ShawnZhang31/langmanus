@@ -76,18 +76,21 @@ def get_llm_by_type(llm_type: LLMType) -> ChatOpenAI | ChatDeepSeek:
             model=REASONING_MODEL,
             base_url=REASONING_BASE_URL,
             api_key=REASONING_API_KEY,
+            temperature=0.0,
         )
     elif llm_type == "basic":
         llm = create_openai_llm(
             model=BASIC_MODEL,
             base_url=BASIC_BASE_URL,
             api_key=BASIC_API_KEY,
+            temperature=0.0,
         )
     elif llm_type == "vision":
         llm = create_openai_llm(
             model=VL_MODEL,
             base_url=VL_BASE_URL,
             api_key=VL_API_KEY,
+            temperature=0.0,
         )
     else:
         raise ValueError(f"Unknown LLM type: {llm_type}")
